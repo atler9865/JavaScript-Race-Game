@@ -123,14 +123,12 @@ function moveEnemy(){
             carRect.right >= enemyRect.left &&
             carRect.left <= enemyRect.right &&
             carRect.bottom >= enemyRect.top){
-
             
             setting.start = false;
 
             start.innerHTML = 'Попробуй еще раз';
             start.classList.remove('hide');
 
-            console.log(score.offsetHeight);
             start.style.top = score.offsetHeight + 'px';
             score.innerHTML = 'Score<br/>' + setting.score;
         }
@@ -147,6 +145,5 @@ function moveEnemy(){
 }
 
 start.addEventListener('click', startGame);
-
 document.addEventListener('keydown', startRun);
 document.addEventListener('keyup', stopRun);
